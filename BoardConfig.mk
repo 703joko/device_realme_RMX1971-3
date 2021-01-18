@@ -99,7 +99,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1971
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_CLANG_VERSION := 12
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -157,7 +157,7 @@ VENDOR_SECURITY_PATCH := 2021-01-05
 
 # Sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
